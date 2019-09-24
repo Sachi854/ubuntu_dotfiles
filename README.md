@@ -7,6 +7,6 @@
 
 ```bash
 $ git clone https://github.com/Agatsuma854/ubuntu_dotfiles.git
-& chmod +x ubuntu_dotfiles/install.sh
+$ chmod +x ubuntu_dotfiles/install.sh
 $ ubuntu_dotfiles/install.sh
 ```  
