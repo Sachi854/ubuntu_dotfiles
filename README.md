@@ -6,5 +6,5 @@
 下のコマンドをホームディレクトリで実行する
 
 ```bash
-$ wget https://github.com/Agatsuma854/ubuntu_dotfiles-.git
+$ wget https://github.com/Agatsuma854/ubuntu_dotfiles.git
 ```  
