@@ -1,8 +1,10 @@
-# dotfiles
+# README
 シェルスクリプトとかも混ざってます
 
-# Linux  
-Ubuntuで使用しているdotfilesが入っています  
+# 使い方  
 
-# ShellScript  
-Ubuntuで使用しているShellScriptが入っています
+下のコマンドをホームディレクトリで実行する
+
+```bash
+$ wget https://github.com/Agatsuma854/ubuntu_dotfiles-.git
+```  

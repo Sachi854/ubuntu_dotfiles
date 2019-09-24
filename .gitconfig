@@ -1,6 +1,6 @@
 [user]
-  name  = ShiroishiTaro
-  email = s89006@marisa-nct.jp
+  name  = Agatsuma854
+  email = s1701002@sendai-nct.jp
 
 [alias]
   st      = status
@@ -33,6 +33,7 @@
   alias   = !"if test -z $1; then loop=; for k in `git config --get-regexp ^alias\\. | sort | sed -e 's/^alias\\.\\(\\S*\\).*/\\1/g'`; do echo -n $k; loop="${loop}1"; if test ${#loop} -lt 5; then echo -n '\t'; else echo; loop=; fi; done; exit; fi; git config --list | grep ^alias\\.$1= | sed -e s/^alias\\.//; exit;"
   delcm   = reset --soft HEAD^
   a       = add .
+
 [push]
   default = simple
 
@@ -48,15 +49,15 @@
 
 [commit]
   # テンプレートのパス
-  template = /home/agatsuma/git_template/.git_commit_log_temp
+  template = ~/git_template/.git_commit_log_temp
 
 [init]
   # テンプレートのパス
-  templatedir = /home/agatsuma/git_template
+  templatedir = ~/git_template
   
 [merge]
   # テンプレートのパス
-  template = /home/agatsuma/git_template/.git_commit_log_temp
+  template = ~/git_template/.git_commit_log_temp
   ff = false
   #tool = vscode
   tool = intellij
@@ -64,7 +65,6 @@
 [diff]
   #tool = vscode
   tool = intellij
-
 
 [mergetool "vscode"]
   cmd = code --wait $MERGED
@@ -84,8 +84,3 @@
 
 [color]
   ui = auto
-
-[http]
-	#proxy = http://wproxy.hogehoge-nct.ac.jp:8080
-[https]
-	#proxy = https://wproxy.hogehoge-nct.ac.jp:8080
