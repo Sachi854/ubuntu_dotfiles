@@ -6,5 +6,7 @@
 下のコマンドをホームディレクトリで実行する
 
 ```bash
-$ wget https://github.com/Agatsuma854/ubuntu_dotfiles.git
+$ git clone https://github.com/Agatsuma854/ubuntu_dotfiles.git
+& chmod +x ubuntu_dotfiles/install.sh
+$ ubuntu_dotfiles/install.sh
 ```  
