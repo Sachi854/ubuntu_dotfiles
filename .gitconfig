@@ -1,6 +1,6 @@
 [user]
-  name  = Agatsuma854
-  email = s1701002@sendai-nct.jp
+  name  = abc
+  email = mail@com
 
 [alias]
   st      = status
@@ -45,7 +45,7 @@
 
 [core]
   autoCRLF = false
-  editor = code --wait
+  #editor = vim
 
 [commit]
   # テンプレートのパス
@@ -59,25 +59,6 @@
   # テンプレートのパス
   template = ~/git_template/.git_commit_log_temp
   ff = false
-  #tool = vscode
-  tool = intellij
-
-[diff]
-  #tool = vscode
-  tool = intellij
-
-[mergetool "vscode"]
-  cmd = code --wait $MERGED
-
-[mergetool "intellij"]
-  cmd = /usr/local/bin/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-  trustExitCode = true
-
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
-
-[difftool "intellij"]
-  cmd = /usr/local/bin/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 
 [pull]
   ff = only
