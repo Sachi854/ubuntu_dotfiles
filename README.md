@@ -1,7 +1,7 @@
 # README
 シェルスクリプトとかも混ざってます  
 
-## Install
+# Install
 
 ```bash
 $ cp -r ./ubuntu_dotfiles/. ~/  
@@ -15,7 +15,38 @@ $ rm -r ./.git
 $ ssh-key -t rsa -b 4096 -C "my_email@tintin.com"
 ```
 
-## Laptop power optimize
+# Set proxy
+
+Terminal  
+ 
+```bash
+export http_proxy="http://remilia.scarlet-net.ac.jp:3983"
+export https_proxy="https://remilia.scarlet-net.ac.jp:3983"
+```
+
+git  
+
+```bash
+git config --global http.proxy http://remilia.scarlet-net.ac.jp:3983
+git config --global https.proxy http://remilia.scarlet-net.ac.jp:3983
+```  
+
+apt  
+  
+```bash
+sudo vim /etc/apt/apt.conf
+
+Acquire::http::Proxy "http://foo.com:8080"
+Acquire::https::Proxy "http://bar.com:8080"
+```  
+
+pip  
+
+```bash
+pip3 --proxy=http://username:password@foobar.com:8080 install numpy
+```
+
+# Laptop power optimize
 
 ```bash
 $ sudo apt update
@@ -24,27 +55,29 @@ $ sudo apt install tlp tlp-rdw
 $ sudo tlp start
 ```
 
-## vim commannd
+# vim commannd
 
-Change mode
+Change mode  
 
-```
+```bash
 normal -> instert : I(beginning of line),i(befor cursor),o(next line)
 normal -> visual  : v,V
 normal -> command : :
 other  -> normal  : esc / <C-c>
 ``` 
 
-mode 
+move  
 
-```
+```bash
 # up
 k
+<C-u> (1/2 page up)
 <C-b> (page up)
 gg (first line)
 
 # down
 j
+<C-d>
 <C-f>
 G
 
@@ -61,14 +94,93 @@ b
 B
 
 # othre
+nG (jump to line n)
 { (begin {}block)
 } (end {}block)
 
 ```
 
-cut/copy/change/other
+Visual mode  
 
+```bash
+# vmode is used for renge selection
+v
+V (select line)
+and use move command
 ```
 
+cut/copy/change/other  
+
+```bash
+# copy == yank
+visual mode + y (Range copy)
+y  (1 line copy?)
+yy (1 line copy)
+0y (1 line copy <- index start is 0)
+ny (n+1 line copy)
+
+# delete(cut)
+vmode + d
+d
+dd
+0d
+nd
+
+# paste
+p
+0p (register 0)
+np (registre n)
 ```
 
+seve  
+
+```bash
+:w
+:w filename.cpp
+:q end
+:q! force end
+:wq
+```
+
+search  
+
+```bash
+/foobar (search foobar)
++ Enter + n/N -> (other hit)
+
+/\cfoobar (search FOOBAR,fooBAR, foobar....)
++ Enter + n/N -> (other hit)
+```
+
+replace  
+
+```bash
+r (replace char under cursor)
+:%s/foo/bar (replace all foo to bar, but 1 line 1 replace)
+:%s/foo/bar/g (replace all foo to bar)
+:1,15s/foo/bar/g (replace 1~15 line foo to bar)
+
+regular expresssion...
+```
+
+split  
+
+```bash
+:sp
+:vp
+
+# change tab
+<C-w>
+
+# open file
+:args filename.txt
+
+# end
+:q
+```
+
+check diff  
+
+```bash
+vim -d a.txt b.txt
+```
