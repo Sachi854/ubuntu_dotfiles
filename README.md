@@ -55,6 +55,12 @@ $ sudo apt install tlp tlp-rdw
 $ sudo tlp start
 ```
 
+# Change dir lang
+
+```bash
+LANG=C xdg-user-dirs-gtk-update
+```
+
 # vim commannd
 
 Change mode  
