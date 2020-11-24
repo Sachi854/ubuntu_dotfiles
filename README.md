@@ -12,7 +12,8 @@ $ rm -r ./.git
 # Gen SSH Key
 
 ```bash
-$ ssh-key -t rsa -b 4096 -C "my_email@tintin.com"
+$ ssh-keygen -t rsa -b 4096 -C "my_email@tintin.com"
+$ pbcopy < ~/.ssh/id_ras.pub
 ```
 
 # Set proxy
