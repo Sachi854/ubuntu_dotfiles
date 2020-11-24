@@ -13,7 +13,8 @@ $ rm -r ./.git
 
 ```bash
 $ ssh-keygen -t rsa -b 4096 -C "my_email@tintin.com"
-$ pbcopy < ~/.ssh/id_ras.pub
+$ cat < ~/.ssh/id_rsa.pub
+$ ssh -T git@github.com
 ```
 
 # Set proxy
