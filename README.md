@@ -126,6 +126,7 @@ y  (1 line copy?)
 yy (1 line copy)
 0y (1 line copy <- index start is 0)
 ny (n+1 line copy)
+"*y(copy to clipboard)
 
 # delete(cut)
 vmode + d
@@ -138,6 +139,7 @@ nd
 p
 0p (register 0)
 np (registre n)
+"*p(paste from clipboard)
 ```
 
 seve  
