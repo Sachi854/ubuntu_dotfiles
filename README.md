@@ -80,6 +80,17 @@ sudo systemctl start amd-disable-c6.service
 reboot
 ```
 
+If you want to be disable c6 at one time...
+
+```
+git clone https://github.com/r4m0n/ZenStates-Linux.git
+cd ZenStates-Linux/
+# disable c6
+sudo python zenstates.py --c6-disable
+# check state
+sudo python zenstates.py -l
+```
+
 # Change dir lang
 
 ```bash
