@@ -75,8 +75,8 @@ Auto disable c6 states at boot time
 git clone https://github.com/joakimkistowski/amd-disable-c6.git
 cd amd-disable-c6/
 sudo make install
-sudo systemctl enable amd_disable_c6.service
-sudo systemctl start amd_disable_c6.service
+sudo systemctl enable amd-disable-c6.service
+sudo systemctl start amd-disable-c6.service
 reboot
 ```
 
