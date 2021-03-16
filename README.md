@@ -97,6 +97,37 @@ sudo python zenstates.py -l
 LANG=C xdg-user-dirs-gtk-update
 ```
 
+# Change audio  sample-format and rate
+
+```
+sudo vim /etc/pulse/daemon.conf
+```
+
+```
+;; default-sample-format = s16le
+;; default-sample-rate = 44100
+default-sample-format = s24le
+default-sample-rate = 96000
+```
+
+```
+pulseaudio -k
+```
+
+# Disable mouse acceleration
+
+GNOME only
+
+```
+sudo apt install dconf-editor
+```
+
+```
+dconf-editor
+
+org/gnome/desktop/peripherals/mouse/acceleration-profile
+```
+
 # vim commannd
 
 Change mode  
