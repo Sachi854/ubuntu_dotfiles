@@ -57,6 +57,29 @@ $ sudo apt install tlp tlp-rdw
 $ sudo tlp start
 ```
 
+# Disable C6 States of Zen env
+
+Load msr modules when loading OS
+
+```
+sudo vim /etc/modules-load.d/modules.conf 
+```
+
+```
+msr
+```
+
+Auto disable c6 states at boot time
+
+```
+git clone https://github.com/joakimkistowski/amd-disable-c6.git
+cd amd-disable-c6/
+sudo make install
+sudo systemctl enable amd_disable_c6.service
+sudo systemctl start amd_disable_c6.service
+reboot
+```
+
 # Change dir lang
 
 ```bash
