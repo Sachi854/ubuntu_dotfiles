@@ -128,6 +128,16 @@ dconf-editor
 org/gnome/desktop/peripherals/mouse/acceleration-profile
 ```
 
+# Change setting of GRUB2
+
+```
+sudo vim /etc/default/grub
+```
+
+```
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+```
+
 # vim commannd
 
 Change mode  
